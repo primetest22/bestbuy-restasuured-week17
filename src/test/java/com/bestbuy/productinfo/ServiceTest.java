@@ -48,7 +48,7 @@ import static io.restassured.RestAssured.given;
             Response response = given()
                     .header("Content-Type", "application/json")
                     .header("Accept", "application/json")
-                    .pathParam("id",25)
+                    .pathParam("id",23)
                     .when()
                     .body(servicePojo)
                     .patch("/services/{id}");
@@ -59,7 +59,7 @@ import static io.restassured.RestAssured.given;
         public void deleteAService() {
             ServicePojo servicesPojo = new ServicePojo();
             Response response = given()
-                    .pathParam("id",25)
+                    .pathParam("id",23)
                     .when()
                     .delete("/services/{id}");
             response.prettyPrint();

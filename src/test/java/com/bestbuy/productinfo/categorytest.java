@@ -15,7 +15,7 @@ public class categorytest  extends TestBase {
     @Test
     public void getAllServices() {
         Response response = given()
-                .queryParams("$limit",3)
+                .queryParams("$limit",2)
                 .queryParams("$skip",1)
                 .when()
                 .get("/categories");
@@ -26,7 +26,7 @@ public class categorytest  extends TestBase {
     @Test
     public void getAServiceOfID() {
         Response response = given()
-                .pathParam("id","300")
+                .pathParam("id","abcat0020001")
                 .when()
                 .get("/categories/{id}");
         response.then().statusCode(200);
