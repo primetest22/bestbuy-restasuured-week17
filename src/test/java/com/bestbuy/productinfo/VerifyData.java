@@ -61,10 +61,11 @@ public class VerifyData extends TestBase {
     @Test
     public void test07() {
 
-            List<HashMap<String, ?>> values = response.extract().path("data.findAll{it.name=='St Cloud'}");
+        //    List<HashMap<String, ?>> values = response.extract().path("data.findAll{it.name=='St Cloud'}");
+            List<String> values = response.extract().path("data.findAll{it.name=='St Cloud'}");
             System.out.println("The values for store name 'St Cloud' are: " + values);
         }
-
+        //test
         @Test
         public void test08 () {
             List<String> address = response.extract().path("data.findAll{it.name=='Rochester'}.address");
